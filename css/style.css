@@ -345,7 +345,215 @@ body {
     animation: pulse 3s ease-in-out infinite;
 }
 
-/* 页脚 */
+/* 电子杂志介绍 */
+.magazine-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(153, 50, 204, 0.3);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.magazine-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+/* 创新中心概览 */
+.center-overview {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.overview-text {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.center-mission {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border-left: 4px solid var(--fire-purple-light);
+}
+
+.center-mission h4 {
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.center-mission ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.center-mission li {
+    padding: 12px 0;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    padding-left: 25px;
+}
+
+.center-mission li:before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: var(--fire-purple-light);
+    font-weight: bold;
+}
+
+.orb-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 关于我们 */
+.about-us {
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(15, 15, 35, 0.9) 100%);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.about-text h3 {
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.highlight-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(153, 50, 204, 0.3);
+}
+
+.highlight-box h4 {
+    color: var(--fire-purple-light);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.highlight-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.highlight-box li {
+    padding: 10px 0;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    padding-left: 20px;
+}
+
+.highlight-box li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.team-info h3 {
+    color: var(--gold);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateX(10px);
+    background: rgba(153, 50, 204, 0.1);
+}
+
+.member-avatar {
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.member-info h4 {
+    color: var(--white);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.member-info p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    line-height: 1.6;
+}
 .fire-footer {
     background: var(--black);
     padding: 40px 0;
