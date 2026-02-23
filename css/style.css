@@ -107,6 +107,109 @@ body {
     transform: translateY(-2px);
 }
 
+/* 下拉菜单样式 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
+    min-width: 200px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    z-index: 1000;
+    border-radius: 10px;
+    border: 1px solid rgba(153, 50, 204, 0.3);
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: rgba(255, 255, 255, 0.9);
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+    border-radius: 0 0 10px 10px;
+}
+
+.dropdown-content a:hover {
+    background: rgba(153, 50, 204, 0.2);
+    color: #FFFFFF;
+    padding-left: 25px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    position: relative;
+}
+
+.dropbtn::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--fire-purple), var(--tang-red));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropbtn::after {
+    transform: scaleX(1);
+}
+
+/* 移动端下拉菜单优化 */
+@media (max-width: 767px) {
+    .dropdown-content {
+        position: static;
+        display: none;
+        width: 100%;
+        margin-top: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+        background: rgba(26, 26, 46, 0.8);
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+    
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown-content a {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .dropbtn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .dropbtn::after {
+        display: none;
+    }
+}
+
 /* 九紫离火运Banner */
 .fire-banner {
     height: 500px;

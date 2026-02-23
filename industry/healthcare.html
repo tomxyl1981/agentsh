@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧医疗行业应用 - AgentSH 智能体调度平台</title>
+    <meta name="description" content="人工智能智能体在医疗健康领域的创新应用与发展前景">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .industry-hero {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .application-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .application-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(231, 76, 60, 0.5);
+        }
+        
+        .medical-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+        }
+        
+        @media (max-width: 767px) {
+            .industry-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .application-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 返回导航 -->
+    <header class="article-header">
+        <div class="header-container">
+            <a href="../index.html" class="back-link">← 返回首页</a>
+            <div class="article-meta">
+                <div class="source-badge">行业应用</div>
+                <div class="publish-date">智慧医疗</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 行业英雄区域 -->
+    <section class="industry-hero">
+        <div class="container">
+            <h1>🏥 智慧医疗</h1>
+            <p>AI智能体守护人类健康未来</p>
+        </div>
+    </section>
+
+    <!-- 行业应用详情 -->
+    <section class="industry-section">
+        <div class="container">
+            <!-- 核心应用 -->
+            <div class="application-card">
+                <div class="medical-icon">🩺</div>
+                <h2>辅助诊断智能体</h2>
+                <p style="color: rgba(255,255,255,0.8); line-height: 1.8; margin: 20px 0;">
+                    基于深度学习的医学影像分析系统，能够识别X光片、CT、MRI等医学图像中的异常，
+                    准确率达到99%以上，大幅提高诊断效率和准确性。
+                </p>
+                <div style="background: rgba(231, 76, 60, 0.1); padding: 20px; border-radius: 10px; margin-top: 20px;">
+                    <h3>技术优势：</h3>
+                    <ul style="color: rgba(255,255,255,0.8); margin: 10px 0 0 20px;">
+                        <li>多模态医学数据分析能力</li>
+                        <li>联邦学习保护患者隐私</li>
+                        <li>实时诊断结果反馈</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="application-card">
+                <div class="medical-icon">💊</div>
+                <h2>药物研发智能体</h2>
+                <p style="color: rgba(255,255,255,0.8); line-height: 1.8; margin: 20px 0;">
+                    运用AI技术加速新药发现过程，通过分子模拟和虚拟筛选，
+                    将传统10-15年的研发周期缩短至3-5年，显著降低研发成本。
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+                    <div style="background: rgba(46, 204, 113, 0.1); padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 1.5rem; color: #2ecc71; font-weight: bold;">70%</div>
+                        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">成功率提升</div>
+                    </div>
+                    <div style="background: rgba(46, 204, 113, 0.1); padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 1.5rem; color: #2ecc71; font-weight: bold;">60%</div>
+                        <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">成本降低</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-card">
+                <div class="medical-icon">🧑‍⚕️</div>
+                <h2>个性化治疗智能体</h2>
+                <p style="color: rgba(255,255,255,0.8); line-height: 1.8; margin: 20px 0;">
+                    基于患者的基因信息、病史和生理数据，制定个性化的治疗方案，
+                    实现精准医疗，提高治疗效果，减少副作用。
+                </p>
+                <div style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 10px; margin-top: 20px;">
+                    <h3>应用案例：</h3>
+                    <p style="color: rgba(255,255,255,0.8); margin: 10px 0;">
+                        某三甲医院通过AI辅助诊疗系统，癌症早期诊断准确率提升35%，
+                        患者平均住院时间缩短2.3天。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
