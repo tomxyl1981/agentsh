@@ -554,6 +554,249 @@ body {
     margin: 0;
     line-height: 1.6;
 }
+
+/* 关于我们 - 移动端优化美化 */
+@media (max-width: 767px) {
+    .about-us {
+        padding: 40px 20px;
+        background: linear-gradient(135deg, #0F0F23 0%, #1A1A2E 100%);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .about-us::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: linear-gradient(to bottom, rgba(153, 50, 204, 0.1), transparent);
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #9932CC;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .about-text {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 25px 20px;
+        border-radius: 20px;
+        border: 1px solid rgba(153, 50, 204, 0.2);
+        backdrop-filter: blur(10px);
+    }
+    
+    .about-text h3 {
+        color: #FFD700;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        text-align: center;
+        font-weight: 700;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 25px;
+        line-height: 1.7;
+        text-align: justify;
+    }
+    
+    .about-highlights {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .highlight-box {
+        background: linear-gradient(135deg, rgba(153, 50, 204, 0.15) 0%, rgba(139, 0, 0, 0.1) 100%);
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid rgba(153, 50, 204, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .highlight-box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(153, 50, 204, 0.2);
+        border-color: rgba(153, 50, 204, 0.5);
+    }
+    
+    .highlight-box h4 {
+        color: #9932CC;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: 600;
+    }
+    
+    .highlight-box ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .highlight-box li {
+        padding: 8px 0;
+        color: rgba(255, 255, 255, 0.8);
+        position: relative;
+        padding-left: 25px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .highlight-box li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #FFD700;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+    
+    .team-info {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 25px 20px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 215, 0, 0.2);
+        backdrop-filter: blur(10px);
+    }
+    
+    .team-info h3 {
+        color: #FFD700;
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+        text-align: center;
+        font-weight: 700;
+    }
+    
+    .team-members {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .team-member {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+    }
+    
+    .team-member:hover {
+        transform: translateX(5px);
+        background: rgba(255, 215, 0, 0.1);
+        border-color: rgba(255, 215, 0, 0.3);
+    }
+    
+    .member-avatar {
+        font-size: 2.5rem;
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #9932CC, #8A2BE2);
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(153, 50, 204, 0.3);
+    }
+    
+    .member-info {
+        flex: 1;
+    }
+    
+    .member-info h4 {
+        color: #FFFFFF;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    
+    .member-info p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+        line-height: 1.5;
+        font-size: 0.9rem;
+    }
+}
+
+/* 平板端优化 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .about-us {
+        padding: 60px 40px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .about-highlights {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    
+    .team-members {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+/* 桌面端优化 */
+@media (min-width: 1024px) {
+    .about-us {
+        padding: 80px 0;
+    }
+    
+    .about-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 60px;
+    }
+    
+    .about-highlights {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    
+    .team-members {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+/* 触摸设备特殊优化 */
+@media (hover: none) and (pointer: coarse) {
+    .highlight-box:hover,
+    .team-member:hover {
+        transform: none;
+    }
+    
+    .highlight-box:active,
+    .team-member:active {
+        transform: scale(0.98);
+    }
+}
+
 .fire-footer {
     background: var(--black);
     padding: 40px 0;
