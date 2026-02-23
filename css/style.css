@@ -1,0 +1,433 @@
+/* 九紫离火运主题样式 */
+:root {
+    /* 九紫离火运主色调 */
+    --fire-purple: #9932CC;      /* 高贵紫色 */
+    --fire-purple-light: #BA55D3; /* 浅紫色 */
+    --fire-purple-dark: #800080;  /* 深紫色 */
+    --tang-red: #8B0000;         /* 盛唐红 */
+    --tang-red-light: #DC143C;   /* 浅红色 */
+    --tang-red-dark: #800000;    /* 深红色 */
+    
+    /* 辅助色彩 */
+    --gold: #FFD700;             /* 金色 */
+    --orange: #FF8C00;           /* 橙色 */
+    --white: #FFFFFF;
+    --black: #1A1A1A;
+    --gray: #666666;
+    
+    /* 渐变背景 */
+    --fire-gradient: linear-gradient(135deg, var(--fire-purple) 0%, var(--tang-red) 100%);
+    --purple-gradient: linear-gradient(135deg, var(--fire-purple-light) 0%, var(--fire-purple) 100%);
+    --red-gradient: linear-gradient(135deg, var(--tang-red-light) 0%, var(--tang-red) 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background: linear-gradient(135deg, #0F0F23 0%, #1A1A2E 100%);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 九紫离火运头部 */
+.fire-header {
+    background: var(--fire-gradient);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(153, 50, 204, 0.3);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-symbol {
+    font-size: 2.5rem;
+    animation: pulse 2s infinite;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(to right, var(--gold), var(--white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: var(--gold);
+    font-weight: 300;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.main-nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* 九紫离火运Banner */
+.fire-banner {
+    height: 500px;
+    background: var(--fire-gradient);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.fire-particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: float 6s infinite ease-in-out;
+}
+
+.fire-particle:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.fire-particle:nth-child(2) {
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.fire-particle:nth-child(3) {
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+.banner-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+.banner-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+}
+
+.banner-tags {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tag-fire, .tag-tech, .tag-ai {
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.tag-fire {
+    background: var(--tang-red-light);
+    color: var(--white);
+}
+
+.tag-tech {
+    background: var(--fire-purple-light);
+    color: var(--white);
+}
+
+.tag-ai {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* 电子杂志展示 */
+.magazine-showcase {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+    background: var(--fire-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.magazine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.magazine-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(153, 50, 204, 0.3);
+    cursor: pointer;
+}
+
+.magazine-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(153, 50, 204, 0.4);
+    border-color: rgba(255, 215, 0, 0.5);
+}
+
+.card-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.source-tag {
+    color: var(--gold);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.card-excerpt {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* 创新中心 */
+.innovation-center {
+    padding: 80px 0;
+    background: rgba(153, 50, 204, 0.1);
+}
+
+.center-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.center-info h3 {
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.center-info p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.center-highlights {
+    display: flex;
+    gap: 30px;
+}
+
+.highlight-item {
+    text-align: center;
+    flex: 1;
+}
+
+.highlight-number {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.highlight-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+
+.tech-orb {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--fire-purple-light) 0%, var(--tang-red-light) 100%);
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 20s linear infinite;
+}
+
+.orb-inner {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* 页脚 */
+.fire-footer {
+    background: var(--black);
+    padding: 40px 0;
+    border-top: 1px solid rgba(153, 50, 204, 0.3);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo h3 {
+    font-size: 1.8rem;
+    color: var(--fire-purple-light);
+    margin-bottom: 5px;
+}
+
+.footer-info {
+    text-align: right;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* 动画效果 */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+    100% { text-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 0 40px rgba(153, 50, 204, 0.6); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .main-nav ul {
+        gap: 15px;
+    }
+    
+    .fire-banner {
+        height: 400px;
+    }
+    
+    .banner-title {
+        font-size: 2.5rem;
+    }
+    
+    .magazine-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .center-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .tech-orb {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
